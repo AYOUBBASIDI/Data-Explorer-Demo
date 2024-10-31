@@ -11,8 +11,8 @@
     },
     "repositories": [
         {
-            "type": "path",
-            "url": "C:\\Users\\ayoub\\Desktop\\basidi\\data-explorer"
+            "type": "vcs",
+            "url": "https://github.com/AYOUBBASIDI/Data-Explorer-Package.git"
         }
     ],
     "require-dev": {
