@@ -20,4 +20,4 @@ services:
         value: /var/data/database.sqlite
     disk:
       mountPath: /var/data
-      persistent: true
+      persisted: true
