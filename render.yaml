@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: data-explorer-demo
+    env: php
+    plan: starter 
+    buildCommand: |
+      composer install
+      php artisan key:generate
+      npm install && npm run build
+      php artisan migrate --seed
+    startCommand: php artisan serve --host 0.0.0.0 --port 10000
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: DB_DATABASE
+        value: /var/data/database.sqlite
+    disk:
+      - mountPath: /var/data
+        persistent: true
