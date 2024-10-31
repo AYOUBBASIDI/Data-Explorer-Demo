@@ -19,5 +19,5 @@ services:
       - key: DB_DATABASE
         value: /var/data/database.sqlite
     disk:
-      - mountPath: /var/data
-        persistent: true
+      mountPath: /var/data
+      persistent: true
